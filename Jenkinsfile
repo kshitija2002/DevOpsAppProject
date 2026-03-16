@@ -3,12 +3,6 @@ agent any
 
 stages {
 
-    stage('Checkout Code') {
-        steps {
-            git 'https://github.com/kshitija2002/DevOpsAppProject.git'
-        }
-    }
-
     stage('Build Docker Image') {
         steps {
             bat 'docker build -t devopsapp .'
